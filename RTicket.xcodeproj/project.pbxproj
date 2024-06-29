@@ -14,6 +14,7 @@
 		D0B4B81D2C2F6B69006A4F0D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D0B4B81C2C2F6B69006A4F0D /* RealmSwift */; };
 		D0B4B81E2C2F6B95006A4F0D /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D0B4B81C2C2F6B69006A4F0D /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D0B4B8222C2F7893006A4F0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8212C2F7893006A4F0D /* LoginView.swift */; };
+		D0B4B8242C2F94E3006A4F0D /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		D0B4B8112C2F68D2006A4F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B4B8142C2F68D2006A4F0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0B4B8212C2F7893006A4F0D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				D0B4B80F2C2F68D0006A4F0D /* ContentView.swift */,
 				D0B4B8212C2F7893006A4F0D /* LoginView.swift */,
+				D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B4B8242C2F94E3006A4F0D /* ProductsView.swift in Sources */,
 				D0B4B8222C2F7893006A4F0D /* LoginView.swift in Sources */,
 				D0B4B8102C2F68D0006A4F0D /* ContentView.swift in Sources */,
 				D0B4B80E2C2F68D0006A4F0D /* RTicketApp.swift in Sources */,

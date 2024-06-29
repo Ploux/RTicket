@@ -16,7 +16,7 @@ struct ContentView: View {
             if username == "" {
                 LoginView(username: $username)
             } else {
-                Text("Logged in as \(username)")
+                ProductsView(username: username)
             }
         }
         
