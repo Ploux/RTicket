@@ -32,16 +32,32 @@ struct TicketsView: View {
                     }
                 }
                 Spacer()
+                VStack {
+                    TextField("Title", text: $title)
+                    TextField("Details", text: $details)
+                        .font(.caption)
+                    Button("Add Ticket") {
+                        addTicket()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .disabled(title.isEmpty || busy)
+                }
             }
             .padding()
             if busy {
                 ProgressView()
             }
         }
+        .onAppear (perform: subscribe)
+        .onDisappear (perform: unsubscribe)
+        .navigationBarTitle(product, displayMode: .inline)
     }
     
     private func addTicket() {
         let ticket = Ticket(product: product, title: title, details: details, author: username)
+        $tickets.append(ticket)
+        title = ""
+        details = ""
     }
     
     private func subscribe() {
