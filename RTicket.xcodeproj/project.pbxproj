@@ -16,6 +16,7 @@
 		D0B4B8222C2F7893006A4F0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8212C2F7893006A4F0D /* LoginView.swift */; };
 		D0B4B8242C2F94E3006A4F0D /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */; };
 		D0B4B8272C2F9717006A4F0D /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8262C2F9717006A4F0D /* Ticket.swift */; };
+		D0B4B8292C2F99A4006A4F0D /* TicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8282C2F99A4006A4F0D /* TicketsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		D0B4B8212C2F7893006A4F0D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		D0B4B8262C2F9717006A4F0D /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		D0B4B8282C2F99A4006A4F0D /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				D0B4B80F2C2F68D0006A4F0D /* ContentView.swift */,
 				D0B4B8212C2F7893006A4F0D /* LoginView.swift */,
 				D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */,
+				D0B4B8282C2F99A4006A4F0D /* TicketsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B4B8292C2F99A4006A4F0D /* TicketsView.swift in Sources */,
 				D0B4B8242C2F94E3006A4F0D /* ProductsView.swift in Sources */,
 				D0B4B8222C2F7893006A4F0D /* LoginView.swift in Sources */,
 				D0B4B8272C2F9717006A4F0D /* Ticket.swift in Sources */,

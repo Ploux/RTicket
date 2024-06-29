@@ -16,16 +16,21 @@ struct ProductsView: View {
     
     var body: some View {
         List {
-            ForEach(products, id: \.self) { product in
-                
-                NavigationLink(destination: Text("\(product)")) {
-                    Text(product)
+            
+            if let realmUser = realmApp.currentUser {
+                ForEach(products, id: \.self) { product in
+                    
+                    NavigationLink(destination: TicketsView(username: username, product: product)
+                        .environment(\.realmConfiguration, realmUser.flexibleSyncConfiguration())) {
+                            Text(product)
+                        }
                 }
             }
-            .navigationBarTitle("Products", displayMode: .inline)
         }
+        .navigationBarTitle("Products", displayMode: .inline)
     }
 }
-    #Preview {
-        ProductsView(username: "test")
-    }
+
+        #Preview {
+            ProductsView(username: "test")
+        }
