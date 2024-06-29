@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import RealmSwift
 
+let realmApp = RealmSwift.App(id: "application-0-rwemjom")
 @main
-struct RTicketApp: App {
+struct RTicketApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             ContentView()
