@@ -17,8 +17,12 @@ struct TicketsView: View {
     let username: String
     let product: String
     
-    @State private var busy = false
     
+    @State private var busy = false
+    @State private var title = ""
+    @State private var details = ""
+    
+   
     var body: some View {
         ZStack {
             VStack {
@@ -34,6 +38,10 @@ struct TicketsView: View {
                 ProgressView()
             }
         }
+    }
+    
+    private func addTicket() {
+        let ticket = Ticket(product: product, title: title, details: details, author: username)
     }
     
     private func subscribe() {
