@@ -15,6 +15,7 @@
 		D0B4B81E2C2F6B95006A4F0D /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = D0B4B81C2C2F6B69006A4F0D /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D0B4B8222C2F7893006A4F0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8212C2F7893006A4F0D /* LoginView.swift */; };
 		D0B4B8242C2F94E3006A4F0D /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */; };
+		D0B4B8272C2F9717006A4F0D /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B8262C2F9717006A4F0D /* Ticket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		D0B4B8142C2F68D2006A4F0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0B4B8212C2F7893006A4F0D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		D0B4B8262C2F9717006A4F0D /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		D0B4B80C2C2F68D0006A4F0D /* RTicket */ = {
 			isa = PBXGroup;
 			children = (
+				D0B4B8252C2F970C006A4F0D /* Model */,
 				D0B4B80D2C2F68D0006A4F0D /* RTicketApp.swift */,
 				D0B4B8202C2F7866006A4F0D /* Views */,
 				D0B4B8112C2F68D2006A4F0D /* Assets.xcassets */,
@@ -96,6 +99,14 @@
 				D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D0B4B8252C2F970C006A4F0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0B4B8262C2F9717006A4F0D /* Ticket.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			files = (
 				D0B4B8242C2F94E3006A4F0D /* ProductsView.swift in Sources */,
 				D0B4B8222C2F7893006A4F0D /* LoginView.swift in Sources */,
+				D0B4B8272C2F9717006A4F0D /* Ticket.swift in Sources */,
 				D0B4B8102C2F68D0006A4F0D /* ContentView.swift in Sources */,
 				D0B4B80E2C2F68D0006A4F0D /* RTicketApp.swift in Sources */,
 			);
