@@ -8,9 +8,9 @@
 import SwiftUI
 import RealmSwift
 
-
 struct TicketView: View {
     @ObservedRealmObject var ticket: Ticket
+    @State private var isEditing = false  // Add this state variable
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -21,6 +21,9 @@ struct TicketView: View {
                 Spacer()
                 DateView(date: ticket.created)
                     .font(.caption)
+                Button(action: { isEditing.toggle() }) {  // Add edit button
+                    Image(systemName: "pencil")
+                }
             }
             Text(ticket.author)
                 .font(.caption)
@@ -56,8 +59,10 @@ struct TicketView: View {
                 .tint(.yellow)
             }
         }
+        .sheet(isPresented: $isEditing) {  // Add sheet to present edit view
+            TicketEditView(ticket: ticket)
+        }
     }
-    
 }
 
 #Preview {
