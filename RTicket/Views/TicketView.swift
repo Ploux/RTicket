@@ -28,7 +28,36 @@ struct TicketView: View {
             Text(ticket.details ?? "No details")
                 .font(.caption)
         }
+        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+            if ticket.status == .inProgress {
+                Button(action: { $ticket.status.wrappedValue = .notStarted }) {
+                    Label("Not Started", systemImage: "stop.circle.fill")
+                }
+                .tint(.red)
+            }
+            if ticket.status == .complete {
+                Button(action: { $ticket.status.wrappedValue = .inProgress }) {
+                    Label("In Progress", systemImage: "bolt.circle.fill")
+                }
+                .tint(.yellow)
+            }
+        }
+        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+            if ticket.status == .inProgress {
+                Button(action: { $ticket.status.wrappedValue = .complete }) {
+                    Label("Complete", systemImage: "checkmark.circle.fill")
+                }
+                .tint(.green)
+            }
+            if ticket.status == .notStarted {
+                Button(action: { $ticket.status.wrappedValue = .inProgress }) {
+                    Label("In Progress", systemImage: "bolt.circle.fill")
+                }
+                .tint(.yellow)
+            }
+        }
     }
+    
 }
 
 #Preview {

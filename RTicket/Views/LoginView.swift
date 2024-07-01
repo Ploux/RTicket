@@ -6,28 +6,85 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct LoginView: View {
-    //if I update username in this view it will be updated in ContentView
-    @Binding var username: String
     
-    var body: some View {
-        ProgressView()
-            .task {
-                await login()
-            }
+    enum Field: Hashable {
+        case username
+        case password
     }
     
-    private func login() async {
-        do {
-            let _ = try await realmApp.login(credentials: .anonymous)
-            username = realmApp.currentUser!.id
-        } catch {
-            print("Failed to login to Realm: \(error.localizedDescription)")
+    @Binding var username: String
+    
+    @State private var email = ""
+    @State private var password = ""
+    @State private var newUser = false
+    @State private var errorMessage = ""
+    @State private var inProgress = false
+    
+    @FocusState private var focusedField: Field?
+    
+    var body: some View {
+        ZStack {
+            VStack(spacing: 16) {
+                Spacer()
+                TextField("email address", text: $email)
+                    .focused($focusedField, equals: .username)
+                    .submitLabel(.next)
+                    .onSubmit { focusedField = .password }
+                SecureField("password", text: $password)
+                    .focused($focusedField, equals: .password)
+                    .onSubmit(userAction)
+                    .submitLabel(.go)
+                Button(action: { newUser.toggle() }) {
+                    HStack {
+                        Image(systemName: newUser ? "checkmark.square" : "square")
+                        Text("Register new user")
+                        Spacer()
+                    }
+                }
+                Button(action: userAction) {
+                    Text(newUser ? "Register new user" : "Log in")
+                }
+                .buttonStyle(.borderedProminent)
+                .controlSize(.large)
+                .disabled(email == "" || password == "")
+                Spacer()
+                Text(errorMessage)
+                    .foregroundColor(.red)
+            }
+            if inProgress {
+                ProgressView()
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                focusedField = .username
+            }
+        }
+        .padding()
+    }
+    
+    func userAction() {
+        errorMessage = ""
+        inProgress = true
+        Task {
+            do {
+                if newUser {
+                    try await realmApp.emailPasswordAuth.registerUser(email: email, password: password)
+                }
+                let _ = try await realmApp.login(credentials: .emailPassword(email: email, password: password))
+                username = email
+                inProgress = false
+            } catch {
+                errorMessage = error.localizedDescription
+                inProgress = false
+            }
         }
     }
 }
 
 #Preview {
-    LoginView(username: .constant(""))
+    LoginView(username: .constant("Peter"))
 }

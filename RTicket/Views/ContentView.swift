@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var username: String = ""
+    @State private var username = ""
     var body: some View {
         
         NavigationView {
@@ -17,6 +17,7 @@ struct ContentView: View {
                 LoginView(username: $username)
             } else {
                 ProductsView(username: username)
+                    .navigationBarItems(trailing: LogoutButton(username: $username))
             }
         }
         

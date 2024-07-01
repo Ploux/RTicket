@@ -21,16 +21,20 @@ struct TicketsView: View {
     @State private var busy = false
     @State private var title = ""
     @State private var details = ""
+    @State private var searchText = ""
     
    
     var body: some View {
-        ZStack {
+        let filteredTickets = tickets.where { ticket in ticket.title.contains(searchText, options: .caseInsensitive) || ticket.details.contains(searchText, options: .caseInsensitive) }
+        
+        return ZStack {
             VStack {
                 List {
-                    ForEach(tickets) { ticket in
-                        Text(ticket.title)
+                    ForEach(searchText.isEmpty ? tickets : filteredTickets) { ticket in
+                        TicketView(ticket: ticket)
                     }
                 }
+                .searchable(text: $searchText)
                 Spacer()
                 VStack {
                     TextField("Title", text: $title)

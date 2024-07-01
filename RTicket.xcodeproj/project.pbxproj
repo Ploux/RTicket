@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D0590EBA2C2FDEDA009DB8AB /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0590EB92C2FDEDA009DB8AB /* TicketView.swift */; };
 		D0590EBC2C322A7B009DB8AB /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0590EBB2C322A7B009DB8AB /* DateView.swift */; };
+		D0590EBE2C3239E2009DB8AB /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0590EBD2C3239E2009DB8AB /* LogoutButton.swift */; };
 		D0B4B80E2C2F68D0006A4F0D /* RTicketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B80D2C2F68D0006A4F0D /* RTicketApp.swift */; };
 		D0B4B8102C2F68D0006A4F0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4B80F2C2F68D0006A4F0D /* ContentView.swift */; };
 		D0B4B8122C2F68D2006A4F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B4B8112C2F68D2006A4F0D /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		D0590EB92C2FDEDA009DB8AB /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		D0590EBB2C322A7B009DB8AB /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		D0590EBD2C3239E2009DB8AB /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
 		D0B4B80A2C2F68D0006A4F0D /* RTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B4B80D2C2F68D0006A4F0D /* RTicketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTicketApp.swift; sourceTree = "<group>"; };
 		D0B4B80F2C2F68D0006A4F0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				D0B4B80F2C2F68D0006A4F0D /* ContentView.swift */,
 				D0B4B8212C2F7893006A4F0D /* LoginView.swift */,
+				D0590EBD2C3239E2009DB8AB /* LogoutButton.swift */,
 				D0B4B8232C2F94E3006A4F0D /* ProductsView.swift */,
 				D0B4B8282C2F99A4006A4F0D /* TicketsView.swift */,
 				D0590EB92C2FDEDA009DB8AB /* TicketView.swift */,
@@ -202,6 +205,7 @@
 				D0590EBA2C2FDEDA009DB8AB /* TicketView.swift in Sources */,
 				D0B4B8272C2F9717006A4F0D /* Ticket.swift in Sources */,
 				D0B4B8102C2F68D0006A4F0D /* ContentView.swift in Sources */,
+				D0590EBE2C3239E2009DB8AB /* LogoutButton.swift in Sources */,
 				D0B4B80E2C2F68D0006A4F0D /* RTicketApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
